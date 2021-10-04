@@ -3,7 +3,7 @@ import logo from './logo.png';
 
 function header() {
   return (
-    <div className="d-flex align-items-center justify-content-between m-4">
+    <div className="d-flex align-items-center justify-content-between border-bottom m-4">
       <div className="d-flex align-items-center">
         <img
           src={logo}
