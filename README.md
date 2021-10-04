@@ -42,15 +42,14 @@
 
 ## Elyor's Profile
 
-- GitHub: [@githubhandle](https://github.com/elyor-doniyorov)
-- Twitter: [@twitterhandle](/)
-- LinkedIn: [LinkedIn](/)
+- Github: [@elyor-doniyorov](https://github.com/elyor-doniyorov)
+- LinkedIn: [@elyor-doniyorov](www.linkedin.com/in/elyor-doniyorov)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/aliabbani/javaScript-capstone-project/issues).
+Feel free to check the [issues page]().
 
 ## Show your support
 
