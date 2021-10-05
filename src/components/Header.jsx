@@ -22,18 +22,24 @@ function header() {
         <NavLink
           to="/rockets"
           className="px-3 fw-bold"
+          activeStyle={{ textDecoration: 'underline' }}
+          style={{ textDecoration: 'none' }}
         >
           Rockets
         </NavLink>
         <NavLink
           to="/missions"
           className="px-3 fw-bold border-end border-dark"
+          activeStyle={{ textDecoration: 'underline' }}
+          style={{ textDecoration: 'none' }}
         >
           Missions
         </NavLink>
         <NavLink
           to="/profile"
           className="px-3 fw-bolder"
+          activeStyle={{ textDecoration: 'underline' }}
+          style={{ textDecoration: 'none' }}
         >
           My Profile
         </NavLink>
