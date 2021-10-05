@@ -10,6 +10,7 @@ const Rockets = () => {
       dispatch(fetchRockets());
     }
   }, []);
+
   return (
     <div>
       Rockets
