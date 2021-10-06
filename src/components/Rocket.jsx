@@ -14,7 +14,7 @@ const Rocket = ({ rocket }) => (
       <div className="rocket-description">
         <h2>{rocket.rocket_name}</h2>
         <p>{rocket.description}</p>
-        <button type="button" className="btn btn-primary">Reservation Rocket</button>
+        <button type="button" className="btn btn-primary">Reserve Rocket</button>
       </div>
     </div>
   </li>
