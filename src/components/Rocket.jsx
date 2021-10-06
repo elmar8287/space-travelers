@@ -1,24 +1,53 @@
 import { PropTypes } from 'prop-types';
+import { Button } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
 import './Rocket.css';
+import { reserveRocket, cancelReservation } from '../redux/rockets/rockets';
 
-const Rocket = ({ rocket }) => (
-  <li key={rocket.id} className="list-unstyled">
-    <div className="d-flex p-3 align-items-center">
-      <div>
-        <img
-          src={rocket.flickr_images[0]}
-          className="rocket-image"
-          alt={rocket.rocket_name}
-        />
-      </div>
-      <div className="rocket-description">
+const Rocket = ({ rocket }) => {
+  const dispatch = useDispatch();
+
+  const makeReservation = (id) => {
+    dispatch(reserveRocket(id));
+  };
+
+  const removeReservation = (id) => {
+    dispatch(cancelReservation(id));
+  };
+
+  return (
+    <li key={rocket.id} className="d-flex list-unstyled m-2 p-1">
+      <img
+        src={rocket.flickr_images[0]}
+        className="rocket-image"
+        alt={rocket.rocket_name}
+      />
+      <div className="flex-grow-3 mx-4">
         <h2>{rocket.rocket_name}</h2>
-        <p>{rocket.description}</p>
-        <button type="button" className="btn btn-primary">Reservation Rocket</button>
+        <p>
+          {rocket.reserved && (
+            <Button disabled className="me-2" size="sm">
+              Reserved
+            </Button>
+          )}
+          {rocket.description}
+        </p>
+        {rocket.reserved ? (
+          <Button
+            variant="outline-secondary"
+            onClick={() => removeReservation(rocket.id)}
+          >
+            Cancel Reservation
+          </Button>
+        ) : (
+          <Button variant="primary" onClick={() => makeReservation(rocket.id)}>
+            Reserve Rocket
+          </Button>
+        )}
       </div>
-    </div>
-  </li>
-);
+    </li>
+  );
+};
 
 export default Rocket;
 
@@ -27,6 +56,7 @@ Rocket.propTypes = {
     id: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf().isRequired,
     rocket_name: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
 };
