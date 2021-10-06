@@ -2,18 +2,6 @@ import { PropTypes } from 'prop-types';
 import { useSelector } from 'react-redux';
 import './Mission.css';
 
-// const Missions = ({ mission }) => (
-//   <li key={mission.id} className="list-unstyled">
-//     <div className="d-flex p-3 align-items-center">
-//       <div className="mission-description">
-//         <h2>{mission.mission_name}</h2>
-//         <p>{mission.description}</p>
-//         <button type="button" className="btn btn-primary">Join Mission</button>
-//       </div>
-//     </div>
-//   </li>
-// );
-
 const Missions = () => {
   const allMissions = useSelector();
 
