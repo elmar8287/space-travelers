@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import { Badge, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import './Rocket.css';
 import { reserveRocket, cancelReservation } from '../redux/rockets/rockets';
@@ -26,9 +26,9 @@ const Rocket = ({ rocket }) => {
         <h2>{rocket.rocket_name}</h2>
         <p>
           {rocket.reserved && (
-            <Badge bg="success" className="me-2">
+            <Button disabled className="me-2" size="sm">
               Reserved
-            </Badge>
+            </Button>
           )}
           {rocket.description}
         </p>
