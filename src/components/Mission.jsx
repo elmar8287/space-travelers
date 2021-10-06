@@ -2,12 +2,13 @@ import { PropTypes } from 'prop-types';
 import './Mission.css';
 
 const Mission = ({ mission }) => (
-  <li key={mission.id} className="list-unstyled">
-    <div className="d-flex p-3 align-items-center">
-      <div className="mission-description">
+  <li key={mission.id}>
+    <div>
+      <div>
         <h2>{mission.mission_name}</h2>
         <p>{mission.description}</p>
-        <button type="button" className="btn btn-primary">Reservation mission</button>
+        <span>Active Memmber</span>
+        <button type="button">Join Mission</button>
       </div>
     </div>
   </li>

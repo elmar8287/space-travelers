@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
-import Mission from './Mission'; // import/extensions
+import Mission from './Mission';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer);

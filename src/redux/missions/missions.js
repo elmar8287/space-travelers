@@ -9,7 +9,7 @@ export const fetchMissions = () => async (dispatch) => {
   const missions = [];
   list.map((mission) => missions.push({
     id: mission.id,
-    mission_name: mission.rocket_name,
+    mission_name: mission.mission_name,
     description: mission.description,
   }));
 
