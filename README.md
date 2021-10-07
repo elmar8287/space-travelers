@@ -20,10 +20,11 @@
 - JavaScript
 - React
 - Redux
+- Netlify
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://space-travelers.netlify.app/)
 
 ## Getting Started
 
