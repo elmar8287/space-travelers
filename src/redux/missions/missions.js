@@ -1,6 +1,9 @@
 const apiEndpoint = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
-const ADD_MISSION = 'rockets/ADD_MISSION';
+const FETCH_MISSIONS = 'space-travellers/missions/FETCH_MISSIONS';
+const JOIN_MISSION = 'space-travellers/missions/JOIN_MISSION';
+const LEAVE_MISSION = 'space-travellers/missions/LEAVE_MISSION';
+const ADD_MISSION = 'missions/ADD_MISSION';
 const fetchAllMissions = async () => {
   let res = await fetch(apiEndpoint);
   res = await res.json();
@@ -21,11 +24,25 @@ export const fetchMissions = async (dispatch, getState) => {
     };
     dispatch(addMission(newMission));
   });
+  dispatch({
+    type: FETCH_MISSIONS,
+    payload: missions,
+  });
 };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_MISSION:
-      return [...state, action.payload];
+    case FETCH_MISSIONS:
+      return [...action.payload];
+    case JOIN_MISSION:
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: true };
+      });
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: false };
+      });
     default:
       return state;
   }
