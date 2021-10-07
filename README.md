@@ -1,8 +1,18 @@
 # Space Travelers' Hub
 
-> Building a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+## Building a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-![screenshot]()
+## Project screenshots:
+
+#### 1. Rockets page
+![Rockets](./src/img/rockets.PNG)
+
+#### 2. Missions page
+![Missions](./src/img/missions.PNG)
+
+#### 3. My profile page
+![My profile](./src/img/profile.PNG)
+
 ## Built With
 
 - HTML
@@ -10,10 +20,11 @@
 - JavaScript
 - React
 - Redux
+- Netlify
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://space-travelers.netlify.app/)
 
 ## Getting Started
 
@@ -62,4 +73,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](/) licensed.
+This project is [MIT](/MIT.md) licensed.
