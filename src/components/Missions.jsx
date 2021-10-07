@@ -1,26 +1,49 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missions';
-import Mission from './Mission';
+import { useEffect } from 'react';
+import {
+  Table, Container, Badge, Button,
+} from 'react-bootstrap';
+import { fetchMissions, missions } from '../redux/missions/missions';
 
-const Missions = () => {
-  const missions = useSelector((state) => state.missionsReducer);
+export default function Missions() {
   const dispatch = useDispatch();
+  const allMissions = useSelector(missions);
   useEffect(() => {
-    if (!missions.length > 0) {
-      dispatch(fetchMissions());
-    }
-  }, []);
-
+    dispatch(fetchMissions);
+  }, [fetchMissions]);
+  const missionComponents = allMissions.map((mission) => (
+    <tr key={mission.mission_id}>
+      <td>
+        <b>{mission.mission_name}</b>
+      </td>
+      <td>{mission.description}</td>
+      <td className="px-4 align-middle">
+        <Badge className="bg-secondary">NOT A MEMBER</Badge>
+      </td>
+      <td className="px-4 align-middle">
+        <Button variant="outline-secondary">Join&nbsp;Mission</Button>
+      </td>
+    </tr>
+  ));
   return (
-    <div>
-      <ul>
-        {missions.map((mission) => (
-          <Mission key={mission.id} mission={mission} />
-        ))}
-      </ul>
-    </div>
+    <Container fluid className="py-3">
+      <Table className="my-4 table-bordered table-striped">
+        <thead>
+          <tr>
+            <td>
+              <b>Mission</b>
+            </td>
+            <td>
+              <b>Description</b>
+            </td>
+            <td>
+              <b>Status</b>
+            </td>
+            <td />
+          </tr>
+        </thead>
+        <tbody>{missionComponents}</tbody>
+      </Table>
+    </Container>
   );
-};
-
-export default Missions;
+}
