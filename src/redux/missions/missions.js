@@ -29,6 +29,17 @@ export const fetchMissions = async (dispatch, getState) => {
     payload: missions,
   });
 };
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
+
+export const leaveMission = (payload) => ({
+  type: LEAVE_MISSION,
+  payload,
+});
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_MISSIONS:

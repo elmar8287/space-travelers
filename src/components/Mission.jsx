@@ -1,5 +1,8 @@
 import { PropTypes } from 'prop-types';
 import { useSelector } from 'react-redux';
+import { Button } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 import './Mission.css';
 
 const Missions = () => {
@@ -42,6 +45,7 @@ Missions.propTypes = {
   mission: PropTypes.shape({
     id: PropTypes.string.isRequired,
     mission_name: PropTypes.string.isRequired,
+    joined: PropTypes.bool.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
 };
