@@ -7,6 +7,15 @@ import './Mission.css';
 
 const Missions = () => {
   const allMissions = useSelector();
+  const dispatch = useDispatch();
+
+  const joinMission = (id) => {
+    dispatch(joinMission(id));
+  };
+
+  const leaveMission = (id) => {
+    dispatch(leaveMission(id));
+  };
 
   const missionComponents = allMissions.map((mission) => (
     <tr key={mission.mission_id}>
