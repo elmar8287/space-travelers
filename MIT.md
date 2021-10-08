@@ -1,0 +1,7 @@
+## Copyright 2021, [Elmar Abdulkarimov and Elyor Doniyorov]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this [Space Travelers' Hub](https://github.com/elmar8287/space-travelers) and associated documentation files, to deal in the [Space Travelers' Hub](https://github.com/elmar8287/space-travelers) without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [Space Travelers' Hub](https://github.com/elmar8287/space-travelers), and to permit persons to whom the [Space Travelers' Hub](https://github.com/elmar8287/space-travelers) is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the [Space Travelers' Hub](https://github.com/elmar8287/space-travelers).
+
+THE [Space Travelers' Hub](https://github.com/elmar8287/space-travelers) IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE [Space Travelers' Hub](https://github.com/elmar8287/space-travelers) OR THE USE OR OTHER DEALINGS IN THE [Space Travelers' Hub](https://github.com/elmar8287/space-travelers)
