@@ -24,7 +24,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://space-travelers.netlify.app/)
+[Live Demo Link](https://frosty-ritchie-155fe0.netlify.app)
 
 ## Getting Started
 
